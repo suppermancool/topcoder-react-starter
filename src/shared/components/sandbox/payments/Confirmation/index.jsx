@@ -35,7 +35,7 @@ export default function Confirmation({
             >Make another payment
             </Button>
             <PrimaryButton
-              to="/sandbox/payments"
+              to="/"
             >Ok, done for now
             </PrimaryButton>
           </div>

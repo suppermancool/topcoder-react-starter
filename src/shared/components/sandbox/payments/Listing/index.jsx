@@ -82,7 +82,7 @@ export default function Listing({
               theme={{
                 button: style.newPaymentButton,
               }}
-              to="/sandbox/payments/new"
+              to="/new"
             >New payment
             </PrimaryButton>
           </div>

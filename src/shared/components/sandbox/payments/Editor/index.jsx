@@ -146,7 +146,7 @@ export default function Editor({
     <Background
       escapeButton
       // TODO: This is wrong, as it reloads the app, but fine for now.
-      onExit={() => { window.location = '/sandbox/payments'; }}
+      onExit={() => { window.location = '/'; }}
     >
       <div styleName="container">
         <h1 styleName="title">{`${neu ? 'New ' : ''}Member Payment`}</h1>

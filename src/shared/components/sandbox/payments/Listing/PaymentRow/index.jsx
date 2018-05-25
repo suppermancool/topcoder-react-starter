@@ -34,7 +34,7 @@ export default function PaymentRow({ challenge }) {
       </td>
       <td styleName="name">
         <Link
-          to={`/sandbox/payments/${challenge.id}`}
+          to={`/${challenge.id}`}
         >{challenge.name}
         </Link>
       </td>
