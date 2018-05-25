@@ -3,7 +3,6 @@
  */
 
 import Error404Page from 'components/Error404Page';
-import HelloWorld from 'components/HelloWorld';
 import React from 'react';
 
 import { Route, Switch } from 'react-router-dom';
