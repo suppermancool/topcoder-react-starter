@@ -9,7 +9,7 @@ import { Route, Switch } from 'react-router-dom';
 import Payment from './payments';
 
 export default function Router({ base }) {
-  const paymentBase = `${base}/payments`;
+  const paymentBase = `${base}`;
   return (
     <Switch>
       <Route

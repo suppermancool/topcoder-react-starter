@@ -26,7 +26,7 @@ test('Passes basic testing', () => {
   expect(ops.applicationModulePath.endsWith('/src/shared/index.jsx'))
     .toBe(true);
 
-  expect(ops.getApplication()).toBe('APPLICATION');
+  expect(ops.getApplication()).toMatchSnapshot();
 
   expect(ops.storeFactory()).toBeInstanceOf(Promise);
 });

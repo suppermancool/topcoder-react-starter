@@ -13,8 +13,7 @@ import Sandbox from './Sandbox';
 export default function Routes() {
   return (
     <Switch>
-      <Route component={HelloWorld} exact path="/" />
-      <Route component={() => <Sandbox base="/sandbox" />} path="/sandbox" />
+      <Route component={() => <Sandbox base="" />} path="/" />
       <Error404Page />
     </Switch>
   );

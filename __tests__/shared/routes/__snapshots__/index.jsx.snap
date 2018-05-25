@@ -7,6 +7,10 @@ exports[`Matches shallow snapshot 1`] = `
     exact={true}
     path="/"
   />
+  <Route
+    component={[Function]}
+    path="/sandbox"
+  />
   <Error404Page />
 </Switch>
 `;

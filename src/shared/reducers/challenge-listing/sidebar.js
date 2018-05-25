@@ -199,7 +199,7 @@ function create(initialState = {}) {
 export function factory(req) {
   const state = {};
 
-  if (req) {
+  if (req && req.query) {
     state.activeBucket = req.query.bucket;
   }
 

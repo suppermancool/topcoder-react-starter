@@ -7,3 +7,5 @@ Object {
   "storeFactory": [Function],
 }
 `;
+
+exports[`Passes basic testing 2`] = `[Function]`;
