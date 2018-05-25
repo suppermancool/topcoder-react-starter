@@ -15,27 +15,28 @@
  * http://redux.js.org/docs/basics/Reducers.html.
  */
 
+import _ from 'lodash';
 import { redux } from 'topcoder-react-utils';
+import { reducerFactory } from 'topcoder-react-lib';
+import { factory as pageFactory } from './page';
+import { factory as challengeListingFactory } from './challenge-listing';
 
-/**
- * @param {Object} req Optional. ExpressJS HTTP request.
- * @return {Promise} Resolves to a new reducer.
- */
-export async function factory(req) {
-  const reducers = await redux.resolveReducers({
-    /* The place to resolve child reducers created by factories. */
-  });
-  return redux.combineReducers((state) => {
-    if (!req) return state;
-    return {
-      ...state,
-
-      /* <MetaTags> rely on this field. */
-      domain: `${req.protocol}://${req.headers.host || req.hostname}`,
-    };
+export function factory(req) {
+  return redux.resolveReducers({
+    standard: reducerFactory(req),
+    challengeListing: challengeListingFactory(req),
+    page: pageFactory(req),
+  }).then(resolvedReducers => redux.combineReducers((state) => {
+    const res = { ...state };
+    if (req) {
+      res.domain = `${req.protocol}://${req.headers.host || req.hostname}`;
+    }
+    return res;
   }, {
-    ...reducers,
-  });
+    ..._.omit(resolvedReducers, 'standard'),
+    ...resolvedReducers.standard,
+    // terms: resolvedReducers.terms,
+  }));
 }
 
 export default undefined;

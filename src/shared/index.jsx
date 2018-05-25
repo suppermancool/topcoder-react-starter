@@ -7,7 +7,11 @@ import Routes from 'routes';
 
 import { DevTools, MetaTags, isomorphy } from 'topcoder-react-utils';
 
-import 'topcoder-react-utils/dist/style.css';
+import 'topcoder-react-ui-kit/dist/style.css';
+
+import 'styles/global.scss';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function Application() {
   return (

@@ -1,7 +1,12 @@
 /**
- * Collection of global mixins to be used all around the app.
+ * Collection of standard mixins you can import and use in your custom
+ * stylesheets.
  */
 
+@import "~topcoder-react-ui-kit/src/styles/mixins";
+@import "_mixins/utils";
+@import "_mixins/buttons";
+@import "_mixins/typography";
 @mixin h1 {
   font-size: 36px;
 }
